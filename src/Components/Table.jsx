@@ -26,6 +26,7 @@ export default function Table(props) {
           <th>DOB</th>
           <th>Email</th>
         </tr>
+
         {props.data ? (
           <>
             {props.data
@@ -51,7 +52,7 @@ export default function Table(props) {
               .map((value, key) => {
                 return (
                   <tr key={key}>
-                    <td onChange={setTrue(!showtrue)}>
+                    <td onClick={setTrue(!showtrue)}>
                       <span>{value.name.title}</span>{" "}
                       <span>{value.name.first}</span>{" "}
                       <span>{value.name.last}</span>
