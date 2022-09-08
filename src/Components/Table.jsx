@@ -40,7 +40,7 @@ export default function Table() {
     if (data.results.length > 0) {
       setData(data.results);
 
-      var arr = {};
+      var arr = [];
 
       for (let i = 0; i < data.results.length; i++) {
         var tempArr = {};
@@ -57,6 +57,7 @@ export default function Table() {
 
         arr[i] = tempArr;
       }
+      console.log(arr);
 
       setPropsData(arr);
     } else {
