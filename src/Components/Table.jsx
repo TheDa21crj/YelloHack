@@ -89,15 +89,17 @@ export default function Table() {
                   return (
                     <tr key={key}>
                       <td>
-                        <img
-                          src={value.picture.medium}
-                          alt=""
-                          className="userImg"
-                        />
-                        {"  "}
-                        <span>{value.name.title}</span>{" "}
-                        <span>{value.name.first}</span>{" "}
-                        <span>{value.name.last}</span>
+                        <p className="namePTag">
+                          <img
+                            src={value.picture.medium}
+                            alt=""
+                            className="userImg"
+                          />
+                          {"  "}
+                          <span>{value.name.title}</span>{" "}
+                          <span>{value.name.first}</span>{" "}
+                          <span>{value.name.last}</span>
+                        </p>
                       </td>
                       <td>{value.gender}</td>
                       <td>
