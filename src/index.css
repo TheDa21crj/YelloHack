@@ -138,14 +138,16 @@ tr:hover {
   color: #1f388c;
 }
 
-.mDiv {
+.mDivCSV {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: red;
+  padding: 8px;
+  border-radius: 8px;
 }
 
-.mDiv p {
+.mDivCSV p {
   margin-left: 5px;
 }
