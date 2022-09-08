@@ -12,6 +12,7 @@ export default function Csv(props) {
       dob: "",
       gender: "",
     };
+
     for (let i = 0; i < props.data.length; i++) {
       arr.name =
         props.data[i].name.title +
