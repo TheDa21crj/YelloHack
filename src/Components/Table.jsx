@@ -94,7 +94,9 @@ export default function Table() {
             <th>Email</th>
           </tr>
           {loading ? (
-            <img src={Loading} alt="" />
+            <div className="loadingDiv">
+              <img src={Loading} alt="" />
+            </div>
           ) : (
             <>
               {showdata ? (
