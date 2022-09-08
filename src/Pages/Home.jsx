@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div>
-      {showData ? (
+      {/* {showData ? (
         <>
           {showData.map((value, key) => {
             return (
@@ -49,7 +49,7 @@ export default function Home() {
         </>
       ) : (
         "No Data"
-      )}
+      )} */}
       <Table data={showData} />
     </div>
   );
