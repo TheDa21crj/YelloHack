@@ -83,3 +83,7 @@ tr {
 tr:hover {
   background-color: #ffe898;
 }
+
+.userImg {
+  border-radius: 50%;
+}
