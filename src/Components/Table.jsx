@@ -48,13 +48,15 @@ export default function Table() {
 
   return (
     <>
-      <input
-        type="text"
-        name=""
-        id=""
-        onChange={filterData}
-        placeholder="Search ..."
-      />
+      <div>
+        <input
+          type="text"
+          name=""
+          id="inpSearch"
+          onChange={filterData}
+          placeholder="Search ..."
+        />
+      </div>
       <div className="mDiv">
         <table>
           <tr>
