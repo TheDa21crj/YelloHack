@@ -37,6 +37,8 @@ export default function Table() {
     const data = await response.json();
 
     if (data.results.length > 0) {
+      setData(data.results);
+
       var arr = {};
 
       for (let i = 0; i < data.results.length; i++) {
@@ -54,8 +56,6 @@ export default function Table() {
 
         arr[i] = tempArr;
       }
-
-      setData(arr);
     } else {
       setData([]);
     }
