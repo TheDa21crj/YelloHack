@@ -25,8 +25,9 @@ export default function Table(props) {
                     <span>{value.name.last}</span>
                   </td>
                   <td>{value.gender}</td>
-                  <td>{value.dob.date}</td>
-                  <td>{value.dob.date.substring(0, 10)}</td>
+                  <td>
+                    <Moment format="MMMM Do YYYY" date={value.dob.date} />
+                  </td>
                   <td>{value.email}</td>
                 </tr>
               );
