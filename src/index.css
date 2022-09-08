@@ -58,7 +58,6 @@ td {
 
 td {
   padding: 10px;
-  /* background-color: cyan; */
 }
 td:first-child,
 th:first-child {
@@ -74,7 +73,7 @@ th:last-child {
 }
 
 tr:nth-child(even) {
-  background-color: #ffe898;
+  background-color: #fff8bc;
 }
 
 tr {
@@ -82,5 +81,5 @@ tr {
 }
 
 tr:hover {
-  background-color: #fff8bc;
+  background-color: #ffe898;
 }
