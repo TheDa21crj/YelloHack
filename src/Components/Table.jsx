@@ -5,7 +5,7 @@ export default function Table(props) {
   const [search, setsearch] = useState("");
   const [showtrue, setTrue] = useState(false);
 
-  const temp = props.data;
+  var temp = props.data;
 
   const filterData = async function (e) {
     setsearch(e.target.value);
@@ -50,9 +50,9 @@ export default function Table(props) {
           <th>Email</th>
         </tr>
 
-        {props.data ? (
+        {temp ? (
           <>
-            {props.data
+            {temp
               .filter((value) => {
                 let name =
                   value.name.title +
