@@ -7,6 +7,7 @@ export default function Table() {
   const [search, setsearch] = useState("");
   const [showtrue, setTrue] = useState(false);
   const [showdata, setData] = useState([]);
+  const [propsData, setPropsData] = useState([]);
 
   const filterData = async function (e) {
     setsearch(e.target.value);
@@ -74,7 +75,7 @@ export default function Table() {
             placeholder="Search..."
           />
         </div>
-        <Csv data={showdata} />
+        <Csv data={propsData} />
       </div>
       <div className="mDiv">
         <table>
