@@ -164,4 +164,5 @@ tr:hover {
 .mDivCSV p {
   margin-top: -5px;
   margin-left: 5px;
+  font-weight: bold;
 }
