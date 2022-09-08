@@ -74,5 +74,13 @@ th:last-child {
 }
 
 tr:nth-child(even) {
-  background-color: #d4f6cc;
+  background-color: #d0fae4;
+}
+
+tr {
+  transition: all 0.3s;
+}
+
+tr:hover {
+  background-color: #a8f4d0;
 }
