@@ -24,8 +24,6 @@ export default function Home() {
 
   return (
     <div>
-      Hello World
-      <br />
       {showData ? (
         <>
           {showData.map((value, key) => {
