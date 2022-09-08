@@ -133,3 +133,7 @@ tr:hover {
   border-width: 0px;
   padding: 12px 8px;
 }
+
+.SearchIcon {
+  color: #1f388c;
+}
