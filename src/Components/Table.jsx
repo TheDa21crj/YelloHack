@@ -19,10 +19,12 @@ export default function Table() {
       const sort = [...showdata].sort((a, b) =>
         a.name.first > b.name.first ? 1 : -1
       );
+      setData(sort);
     } else {
       const sort = [...showdata].sort((a, b) =>
         a.name.first < b.name.first ? 1 : -1
       );
+      setData(sort);
     }
   };
 
