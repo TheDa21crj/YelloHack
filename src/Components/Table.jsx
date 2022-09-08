@@ -91,7 +91,7 @@ export default function Table() {
                       <td>
                         <p className="namePTag">
                           <img
-                            src={value.picture.thumbnail}
+                            src={value.picture.medium}
                             alt=""
                             className="userImg"
                           />
