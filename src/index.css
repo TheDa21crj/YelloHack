@@ -102,6 +102,13 @@ tr:hover {
   border-radius: 50%;
 }
 
+.topDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
 #inpSearch {
   width: 60%;
 }
