@@ -52,6 +52,7 @@ export default function Table() {
     <>
       <div className="topDiv">
         <div className="inpDiv">
+          <SearchIcon />
           <input
             type="text"
             name=""
