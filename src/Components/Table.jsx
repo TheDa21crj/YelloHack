@@ -57,7 +57,6 @@ export default function Table() {
 
         arr[i] = tempArr;
       }
-      console.log(arr);
 
       setPropsData(arr);
     } else {
