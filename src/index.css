@@ -141,6 +141,11 @@ tr:hover {
 .mDiv {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  background-color: red;
+}
+
+.mDiv p {
+  margin-left: 5px;
 }
