@@ -40,6 +40,6 @@ th {
   text-transform: capitalize;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #dddddd;
-}
+} */
