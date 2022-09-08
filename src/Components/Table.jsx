@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Loading from "./../Img/loading.gif";
 
 export default function Table() {
+  const [loading, setloading] = useState(true);
   const [search, setsearch] = useState("");
   const [showtrue, setTrue] = useState(false);
   const [showdata, setData] = useState([]);
@@ -60,6 +61,8 @@ export default function Table() {
       }
 
       setPropsData(arr);
+
+      setloading(false);
     } else {
       setData([]);
     }
@@ -90,55 +93,65 @@ export default function Table() {
             <th>DOB</th>
             <th>Email</th>
           </tr>
-
-          {showdata ? (
-            <>
-              {showdata
-                .filter((value) => {
-                  let name =
-                    value.name.title +
-                    " " +
-                    value.name.first +
-                    " " +
-                    value.name.last;
-
-                  if (search === "") {
-                    return value;
-                  } else if (
-                    name.toLowerCase().includes(search.toLowerCase()) ||
-                    value.gender.toLowerCase().includes(search.toLowerCase()) ||
-                    value.email.toLowerCase().includes(search.toLowerCase())
-                  ) {
-                    return value;
-                  }
-                })
-                .map((value, key) => {
-                  return (
-                    <tr key={key}>
-                      <td>
-                        <p className="namePTag">
-                          <img
-                            src={value.picture.medium}
-                            alt=""
-                            className="userImg"
-                          />
-                          <p className="name">
-                            {value.name.title} {value.name.first}{" "}
-                            {value.name.last}
-                          </p>
-                        </p>
-                      </td>
-                      <td>{value.gender}</td>
-                      <td>
-                        <Moment format="MMMM Do YYYY" date={value.dob.date} />
-                      </td>
-                      <td>{value.email}</td>
-                    </tr>
-                  );
-                })}
-            </>
+          {loading ? (
+            <img src={Loading} alt="" />
           ) : (
-            "No Data"
+            <>
+              {showdata ? (
+                <>
+                  {showdata
+                    .filter((value) => {
+                      let name =
+                        value.name.title +
+                        " " +
+                        value.name.first +
+                        " " +
+                        value.name.last;
+
+                      if (search === "") {
+                        return value;
+                      } else if (
+                        name.toLowerCase().includes(search.toLowerCase()) ||
+                        value.gender
+                          .toLowerCase()
+                          .includes(search.toLowerCase()) ||
+                        value.email.toLowerCase().includes(search.toLowerCase())
+                      ) {
+                        return value;
+                      }
+                    })
+                    .map((value, key) => {
+                      return (
+                        <tr key={key}>
+                          <td>
+                            <p className="namePTag">
+                              <img
+                                src={value.picture.medium}
+                                alt=""
+                                className="userImg"
+                              />
+                              <p className="name">
+                                {value.name.title} {value.name.first}{" "}
+                                {value.name.last}
+                              </p>
+                            </p>
+                          </td>
+                          <td>{value.gender}</td>
+                          <td>
+                            <Moment
+                              format="MMMM Do YYYY"
+                              date={value.dob.date}
+                            />
+                          </td>
+                          <td>{value.email}</td>
+                        </tr>
+                      );
+                    })}
+                </>
+              ) : (
+                "No Data"
+              )}
+            </>
           )}
         </table>
       </div>
