@@ -3,12 +3,6 @@ import GetAppIcon from "@mui/icons-material/GetApp";
 import { CSVLink } from "react-csv";
 
 export default function Csv(props) {
-  //   const [downdata, setdata] = useState([]);
-
-  //   useEffect(() => {
-  //     cvsDataFun();
-  //   }, []);
-
   const cvsDataFun = async () => {
     var tempArr = [];
 
