@@ -31,8 +31,8 @@ export default function Home() {
             return (
               <div>
                 <p>
-                  name = <span>value.name.title</span>{" "}
-                  <span>value.name.first</span> <span>value.name.title</span>
+                  name = <span>{value.name.title}</span>{" "}
+                  <span>{value.name.first}</span> <span>{value.name.last}</span>
                 </p>
                 <span></span>
               </div>
