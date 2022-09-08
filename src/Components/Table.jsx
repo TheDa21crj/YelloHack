@@ -37,9 +37,8 @@ export default function Table(props) {
                   // value.name.last
                   //   .toLowerCase()
                   //   .includes(search.toLowerCase()) ||
-                  value.gender.toLowerCase().includes(search.toLowerCase())
-                  // ||
-                  // value.email.toLowerCase().includes(search.toLowerCase())
+                  // value.gender.toLowerCase().includes(search.toLowerCase()) ||
+                  value.email.toLowerCase().includes(search.toLowerCase())
                 ) {
                   console.table(value);
                   return value;
