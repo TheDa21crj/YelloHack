@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Moment from "react-moment";
 
-export default function Table(props) {
+export default function Table() {
   const [search, setsearch] = useState("");
   const [showtrue, setTrue] = useState(false);
+  const [showdata, setData] = useState([]);
 
-  var temp = props.data;
+  // var temp = props.data;
 
   const filterData = async function (e) {
     setsearch(e.target.value);
@@ -14,23 +15,36 @@ export default function Table(props) {
   const sortFun = async () => {
     setTrue(!showtrue);
 
-    let dataSort = props.data;
     if (showtrue) {
-      const sort = [...dataSort].sort((a, b) =>
+      const sort = [...showdata].sort((a, b) =>
         a.name.first > b.name.first ? 1 : -1
       );
-      console.table(sort);
     } else {
-      const sort = [...dataSort].sort((a, b) =>
+      const sort = [...showdata].sort((a, b) =>
         a.name.first < b.name.first ? 1 : -1
       );
-      console.table(sort);
     }
   };
 
   useEffect(() => {
     console.log(showtrue);
   }, [showtrue]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const response = await fetch("https://randomuser.me/api/?results=10");
+    const data = await response.json();
+
+    // console.table(data.results);
+    if (data.results.length > 0) {
+      setData(data.results);
+    } else {
+      setData([]);
+    }
+  };
 
   return (
     <>
@@ -50,9 +64,9 @@ export default function Table(props) {
           <th>Email</th>
         </tr>
 
-        {temp ? (
+        {showdata ? (
           <>
-            {temp
+            {showdata
               .filter((value) => {
                 let name =
                   value.name.title +
