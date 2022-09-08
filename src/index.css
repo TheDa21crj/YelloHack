@@ -101,3 +101,7 @@ tr:hover {
   width: 48px;
   border-radius: 50%;
 }
+
+#inpSearch {
+  width: 60%;
+}
