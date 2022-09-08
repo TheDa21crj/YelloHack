@@ -15,8 +15,6 @@ export default function Home() {
     console.table(data.results);
     if (data.results.length > 0) {
       setData(data.results);
-
-      // console.table(data.results[0].name);
     } else {
       setData([]);
     }
@@ -52,6 +50,7 @@ export default function Home() {
       ) : (
         "No Data"
       )}
+      <Table data={showData} />
     </div>
   );
 }
