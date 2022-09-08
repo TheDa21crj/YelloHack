@@ -3,9 +3,17 @@ import Moment from "react-moment";
 
 export default function Table(props) {
   const [search, setsearch] = useState("");
+  const [showtrue, setTrue] = useState(false);
 
   const filterData = async function (e) {
     setsearch(e.target.value);
+  };
+
+  const changeSort = async (e) => {
+    // if (e.target.value === "low") {
+    //   const sort = [...showGender].sort((a, b) => (a.price > b.price ? 1 : -1));
+    //   setGender(sort);
+    console.log(showGender);
   };
   return (
     <>
