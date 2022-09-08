@@ -6,6 +6,8 @@ export default function Csv(props) {
   const cvsDataFun = async () => {
     var tempArr = [];
 
+    var finalArray;
+
     var arr = {
       name: "",
       email: "",
@@ -23,7 +25,7 @@ export default function Csv(props) {
       arr.email = props.data[i].email;
       arr.gender = props.data[i].gender;
 
-      tempArr.concat(arr);
+      tempArr = tempArr.concat(arr);
     }
 
     console.log(tempArr);
