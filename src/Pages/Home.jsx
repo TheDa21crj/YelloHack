@@ -34,7 +34,13 @@ export default function Home() {
                   name = <span>{value.name.title}</span>{" "}
                   <span>{value.name.first}</span> <span>{value.name.last}</span>
                 </p>
+
+                <p>
+                  Gender: <span>{value.gender}</span>
+                </p>
                 <span></span>
+                <br />
+                <br />
               </div>
             );
           })}
