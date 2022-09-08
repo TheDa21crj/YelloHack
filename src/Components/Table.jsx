@@ -7,9 +7,10 @@ export default function Table(props) {
     <>
       <table>
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>DOB</th>
+          <th>Email</th>
         </tr>
         <tr>
           <td>Company</td>
