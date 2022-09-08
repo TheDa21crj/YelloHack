@@ -13,11 +13,20 @@ export default function Table(props) {
   const changeSort = async () => {
     let sortData = props.data;
     if (showtrue) {
+      const sortVar = [...sort].sort((a, b) =>
+        a.name.first > b.name.first ? 1 : -1
+      );
+      setsort(sortVar);
+    } else {
+      const sortVar = [...sort].sort((a, b) =>
+        a.name.first < b.name.first ? 1 : -1
+      );
+      setsort(sortVar);
     }
     // if (e.target.value === "low") {
     //   const sort = [...showGender].sort((a, b) => (a.price > b.price ? 1 : -1));
     //   setGender(sort);
-    console.log(showGender);
+    // console.log(showGender);
   };
   return (
     <>
