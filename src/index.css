@@ -50,7 +50,12 @@ th {
 td {
   font-weight: bold;
   text-transform: capitalize;
+}
+
+tr {
+  border-radius: 8px;
   border: 1px solid #dddddd;
+  margin: 2px 0px;
 }
 
 /* tr:nth-child(even) {
