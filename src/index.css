@@ -84,6 +84,16 @@ tr:hover {
   background-color: #ffe898;
 }
 
+.namePTag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.name {
+  margin-left: 20px;
+}
+
 .userImg {
   border-radius: 50%;
 }
