@@ -13,9 +13,32 @@ export default function Home() {
 
     console.table(data.results);
     if (data.results.length > 0) {
-      setData = data.results;
+      setData(data.results);
+    } else {
+      setData([]);
     }
   };
 
-  return <div>Hello World</div>;
+  return (
+    <div>
+      Hello World
+      <br />
+      {showData ? (
+        <>
+          {showData.map((value, key) => {
+            return (
+              <div>
+                <p>
+                  name = <span></span> <span></span> <span></span>
+                </p>
+                <span></span>
+              </div>
+            );
+          })}
+        </>
+      ) : (
+        "No Data"
+      )}
+    </div>
+  );
 }
