@@ -36,12 +36,6 @@ export default function Table(props) {
                   return value;
                 } else if (
                   name.toLowerCase().includes(search.toLowerCase()) ||
-                  // value.name.first
-                  //   .toLowerCase()
-                  //   .includes(search.toLowerCase()) ||
-                  // value.name.last
-                  //   .toLowerCase()
-                  //   .includes(search.toLowerCase()) ||
                   value.gender.toLowerCase().includes(search.toLowerCase()) ||
                   value.email.toLowerCase().includes(search.toLowerCase())
                 ) {
