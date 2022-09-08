@@ -55,7 +55,6 @@ export default function Table(props) {
                   value.gender.toLowerCase().includes(search.toLowerCase()) ||
                   value.email.toLowerCase().includes(search.toLowerCase())
                 ) {
-                  console.table(value);
                   return value;
                 }
               })
