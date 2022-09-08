@@ -52,7 +52,7 @@ export default function Table(props) {
               .map((value, key) => {
                 return (
                   <tr key={key}>
-                    <td>
+                    <td onClick={changeSort}>
                       <span>{value.name.title}</span>{" "}
                       <span>{value.name.first}</span>{" "}
                       <span>{value.name.last}</span>
