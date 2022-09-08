@@ -6,7 +6,7 @@ export default function Home() {
   }, []);
 
   const getData = async () => {
-    const response = await fetch(url);
+    const response = await fetch("https://randomuser.me/api/");
     const data = await response.json();
 
     console.log(data);
