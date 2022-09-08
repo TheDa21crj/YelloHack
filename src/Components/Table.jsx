@@ -61,7 +61,7 @@ export default function Table() {
             placeholder="Search..."
           />
         </div>
-        <Csv />
+        <Csv data={showdata} />
       </div>
       <div className="mDiv">
         <table>
