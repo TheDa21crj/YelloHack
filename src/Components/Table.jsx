@@ -19,12 +19,12 @@ export default function Table(props) {
       const sort = [...dataSort].sort((a, b) =>
         a.name.first > b.name.first ? 1 : -1
       );
-      // setGender(sort);
+      props.data = dataSort;
     } else {
       const sort = [...dataSort].sort((a, b) =>
         a.name.first < b.name.first ? 1 : -1
       );
-      // setGender(sort);
+      props.data = dataSort;
     }
   };
 
