@@ -137,3 +137,10 @@ tr:hover {
 .SearchIcon {
   color: #1f388c;
 }
+
+.mDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
