@@ -23,9 +23,7 @@ export default function Csv(props) {
       arr.email = props.data[i].email;
       arr.gender = props.data[i].gender;
 
-      tempArr.push(arr);
-
-      console.log(arr);
+      tempArr.concat(arr);
     }
 
     console.log(tempArr);
