@@ -4,10 +4,6 @@ import Moment from "react-moment";
 export default function Table(props) {
   const [search, setsearch] = useState("");
 
-  useEffect(() => {
-    console.log(search);
-  }, [search]);
-
   const filterData = async function (e) {
     setsearch(e.target.value);
   };
