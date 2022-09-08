@@ -10,6 +10,7 @@ export default function Table(props) {
           <th>Name</th>
           <th>Gender</th>
           <th>DOB</th>
+          <th>DOB Format</th>
           <th>Email</th>
         </tr>
         {props.data ? (
@@ -24,6 +25,7 @@ export default function Table(props) {
                   </td>
                   <td>{value.gender}</td>
                   <td>{value.dob.date}</td>
+                  <td>{value.dob.date.substring(0, 10)}</td>
                   <td>{value.email}</td>
                 </tr>
               );
