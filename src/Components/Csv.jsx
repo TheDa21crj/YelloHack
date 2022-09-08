@@ -12,6 +12,7 @@ export default function Csv(props) {
       name: "",
       email: "",
       dob: "",
+      gender: "",
     };
     for (let i = 0; i < props.data.length; i++) {}
     console.log(props.data.length);
