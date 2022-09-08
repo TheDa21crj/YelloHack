@@ -16,10 +16,12 @@ export default function Table(props) {
           <td>Company</td>
           <td>Contact</td>
           <td>Country</td>
+          <td>Country</td>
         </tr>
         <tr>
           <td>Company</td>
           <td>Contact</td>
+          <td>Country</td>
           <td>Country</td>
         </tr>
       </table>
