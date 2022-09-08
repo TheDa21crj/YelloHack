@@ -6,10 +6,10 @@ export default function Home() {
   }, []);
 
   const getData = async () => {
-    const response = await fetch("https://randomuser.me/api/");
+    const response = await fetch("https://randomuser.me/api/?results=10");
     const data = await response.json();
 
-    console.log(data);
+    console.table(data.results);
   };
 
   return <div>Hello World</div>;
