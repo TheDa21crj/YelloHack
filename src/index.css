@@ -21,7 +21,7 @@ code {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 95%;
 }
 
 th {
@@ -31,14 +31,20 @@ th {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  background-color: lightgray;
+  color: gray;
 }
 
 td,
 th {
-  border-radius: 8px;
-  border: 1px solid #dddddd;
   padding: 12px 8px;
+}
+
+td {
+  border-radius: 8px;
+  font-weight: bold;
   text-transform: capitalize;
+  border: 1px solid #dddddd;
 }
 
 /* tr:nth-child(even) {
