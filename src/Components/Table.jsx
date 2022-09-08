@@ -18,6 +18,7 @@ export default function Table(props) {
         onChange={filterData}
         placeholder="Search ..."
       />
+
       <table>
         <tr>
           <th>Name</th>
