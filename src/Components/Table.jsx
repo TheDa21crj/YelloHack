@@ -62,7 +62,7 @@ export default function Table() {
 
       setPropsData(arr);
 
-      setloading(false);
+      // setloading(false);
     } else {
       setData([]);
     }
@@ -84,21 +84,33 @@ export default function Table() {
         <Csv data={propsData} />
       </div>
       <div className="mDiv">
-        <table>
-          <tr>
-            <th onClick={sortFun} className="nameTH">
-              Name
-            </th>
-            <th>Gender</th>
-            <th>DOB</th>
-            <th>Email</th>
-          </tr>
-          {loading ? (
+        {loading ? (
+          <>
+            <table>
+              <tr>
+                <th onClick={sortFun} className="nameTH">
+                  Name
+                </th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Email</th>
+              </tr>
+            </table>
             <div className="loadingDiv">
               <img src={Loading} alt="" />
             </div>
-          ) : (
-            <>
+          </>
+        ) : (
+          <>
+            <table>
+              <tr>
+                <th onClick={sortFun} className="nameTH">
+                  Name
+                </th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Email</th>
+              </tr>
               {showdata ? (
                 <>
                   {showdata
@@ -153,9 +165,9 @@ export default function Table() {
               ) : (
                 "No Data"
               )}
-            </>
-          )}
-        </table>
+            </table>
+          </>
+        )}
       </div>
     </>
   );
