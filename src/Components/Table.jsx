@@ -51,13 +51,15 @@ export default function Table() {
   return (
     <>
       <div className="topDiv">
-        <input
-          type="text"
-          name=""
-          id="inpSearch"
-          onChange={filterData}
-          placeholder="Search ..."
-        />
+        <div className="inpDiv">
+          <input
+            type="text"
+            name=""
+            id="inpSearch"
+            onChange={filterData}
+            placeholder="Search..."
+          />
+        </div>
         <Csv />
       </div>
       <div className="mDiv">
