@@ -15,22 +15,32 @@ export default function Table(props) {
         </tr>
         {props.data ? (
           <>
-            {props.data.map((value, map) => {
-              return (
-                <tr>
-                  <td>
-                    <span>{value.name.title}</span>{" "}
-                    <span>{value.name.first}</span>{" "}
-                    <span>{value.name.last}</span>
-                  </td>
-                  <td>{value.gender}</td>
-                  <td>
-                    <Moment format="MMMM Do YYYY" date={value.dob.date} />
-                  </td>
-                  <td>{value.email}</td>
-                </tr>
-              );
-            })}
+            {props.data
+              .filter((value) => {
+                if (search === "") {
+                  return value;
+                } else if (
+                  value.name.toLowerCase().includes(search.toLowerCase())
+                ) {
+                  return value;
+                }
+              })
+              .map((value, map) => {
+                return (
+                  <tr>
+                    <td>
+                      <span>{value.name.title}</span>{" "}
+                      <span>{value.name.first}</span>{" "}
+                      <span>{value.name.last}</span>
+                    </td>
+                    <td>{value.gender}</td>
+                    <td>
+                      <Moment format="MMMM Do YYYY" date={value.dob.date} />
+                    </td>
+                    <td>{value.email}</td>
+                  </tr>
+                );
+              })}
           </>
         ) : (
           "No Data"
