@@ -12,12 +12,17 @@ export default function Table(props) {
   const sortFun = async () => {
     setTrue(!showtrue);
 
-    if (e.target.value === "low") {
-      const sort = [...showGender].sort((a, b) => (a.price > b.price ? 1 : -1));
+    let dataSort = props.data;
+    if (showtrue) {
+      const sort = [...dataSort].sort((a, b) =>
+        a.name.first > b.name.first ? 1 : -1
+      );
       setGender(sort);
-    } else if (e.target.value === "high") {
-      const sort = [...showGender].sort((a, b) => (a.price < b.price ? 1 : -1));
-      setGender(sort);
+    } else {
+      const sort = [...dataSort].sort((a, b) =>
+        a.name.first < b.name.first ? 1 : -1
+      );
+      // setGender(sort);
     }
   };
 
