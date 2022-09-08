@@ -54,57 +54,58 @@ export default function Table() {
         onChange={filterData}
         placeholder="Search ..."
       />
+      <div className="mDiv">
+        <table>
+          <tr>
+            <th onClick={sortFun}>Name</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Email</th>
+          </tr>
 
-      <table>
-        <tr>
-          <th onClick={sortFun}>Name</th>
-          <th>Gender</th>
-          <th>DOB</th>
-          <th>Email</th>
-        </tr>
+          {showdata ? (
+            <>
+              {showdata
+                .filter((value) => {
+                  let name =
+                    value.name.title +
+                    " " +
+                    value.name.first +
+                    " " +
+                    value.name.last;
 
-        {showdata ? (
-          <>
-            {showdata
-              .filter((value) => {
-                let name =
-                  value.name.title +
-                  " " +
-                  value.name.first +
-                  " " +
-                  value.name.last;
-
-                if (search === "") {
-                  return value;
-                } else if (
-                  name.toLowerCase().includes(search.toLowerCase()) ||
-                  value.gender.toLowerCase().includes(search.toLowerCase()) ||
-                  value.email.toLowerCase().includes(search.toLowerCase())
-                ) {
-                  return value;
-                }
-              })
-              .map((value, key) => {
-                return (
-                  <tr key={key}>
-                    <td>
-                      <span>{value.name.title}</span>{" "}
-                      <span>{value.name.first}</span>{" "}
-                      <span>{value.name.last}</span>
-                    </td>
-                    <td>{value.gender}</td>
-                    <td>
-                      <Moment format="MMMM Do YYYY" date={value.dob.date} />
-                    </td>
-                    <td>{value.email}</td>
-                  </tr>
-                );
-              })}
-          </>
-        ) : (
-          "No Data"
-        )}
-      </table>
+                  if (search === "") {
+                    return value;
+                  } else if (
+                    name.toLowerCase().includes(search.toLowerCase()) ||
+                    value.gender.toLowerCase().includes(search.toLowerCase()) ||
+                    value.email.toLowerCase().includes(search.toLowerCase())
+                  ) {
+                    return value;
+                  }
+                })
+                .map((value, key) => {
+                  return (
+                    <tr key={key}>
+                      <td>
+                        <span>{value.name.title}</span>{" "}
+                        <span>{value.name.first}</span>{" "}
+                        <span>{value.name.last}</span>
+                      </td>
+                      <td>{value.gender}</td>
+                      <td>
+                        <Moment format="MMMM Do YYYY" date={value.dob.date} />
+                      </td>
+                      <td>{value.email}</td>
+                    </tr>
+                  );
+                })}
+            </>
+          ) : (
+            "No Data"
+          )}
+        </table>
+      </div>
     </>
   );
 }
