@@ -66,7 +66,9 @@ export default function Table() {
       <div className="mDiv">
         <table>
           <tr>
-            <th onClick={sortFun}>Name</th>
+            <th onClick={sortFun} className="nameTH">
+              Name
+            </th>
             <th>Gender</th>
             <th>DOB</th>
             <th>Email</th>
