@@ -5,7 +5,23 @@ export default function Table(props) {
 
   return (
     <>
-      <table></table>
+      <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Company</td>
+          <td>Contact</td>
+          <td>Country</td>
+        </tr>
+        <tr>
+          <td>Company</td>
+          <td>Contact</td>
+          <td>Country</td>
+        </tr>
+      </table>
     </>
   );
 }
