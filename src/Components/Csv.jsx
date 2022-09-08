@@ -1,11 +1,14 @@
 import React from "react";
 import GetAppIcon from "@mui/icons-material/GetApp";
+import { CSVLink } from "react-csv";
 
-export default function Csv() {
+export default function Csv(props) {
   return (
-    <div className="mDivCSV">
-      <GetAppIcon />
-      <p>Export</p>
-    </div>
+    <CSVLink data={props.data}>
+      <div className="mDivCSV">
+        <GetAppIcon />
+        <p>Export</p>
+      </div>
+    </CSVLink>
   );
 }
