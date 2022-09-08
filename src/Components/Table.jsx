@@ -11,7 +11,6 @@ export default function Table(props) {
           <th>Name</th>
           <th>Gender</th>
           <th>DOB</th>
-          <th>DOB Format</th>
           <th>Email</th>
         </tr>
         {props.data ? (
