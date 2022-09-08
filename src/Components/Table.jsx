@@ -10,6 +10,8 @@ export default function Table(props) {
   };
 
   const sortFun = async () => {
+    console.log("object====");
+
     setTrue(!showtrue);
   };
 
@@ -29,7 +31,7 @@ export default function Table(props) {
 
       <table>
         <tr>
-          <th>Name</th>
+          <th onClick={sortFun}>Name</th>
           <th>Gender</th>
           <th>DOB</th>
           <th>Email</th>
@@ -60,7 +62,7 @@ export default function Table(props) {
               .map((value, key) => {
                 return (
                   <tr key={key}>
-                    <td onClick={sortFun}>
+                    <td>
                       <span>{value.name.title}</span>{" "}
                       <span>{value.name.first}</span>{" "}
                       <span>{value.name.last}</span>
