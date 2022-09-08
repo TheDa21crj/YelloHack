@@ -38,7 +38,6 @@ export default function Home() {
                 <p>
                   Gender: <span>{value.gender}</span>
                 </p>
-                <span></span>
                 <br />
                 <br />
               </div>
