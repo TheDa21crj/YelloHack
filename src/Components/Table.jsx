@@ -57,6 +57,8 @@ export default function Table() {
 
         arr[i] = tempArr;
       }
+
+      setPropsData(arr);
     } else {
       setData([]);
     }
