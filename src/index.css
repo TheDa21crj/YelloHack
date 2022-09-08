@@ -124,6 +124,7 @@ tr:hover {
   border-style: solid;
   border-width: 1px;
   border-color: lightgray;
+  transition: all 0.3s;
 }
 
 .nameTH {
