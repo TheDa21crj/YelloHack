@@ -7,7 +7,15 @@ export default function Csv(props) {
     cvsDataFun();
   }, []);
 
-  const cvsDataFun = async () => {};
+  const cvsDataFun = async () => {
+    var arr = {
+      name: "",
+      email: "",
+      dob: "",
+    };
+    for (let i = 0; i < props.data.length; i++) {}
+    console.log(props.data.length);
+  };
 
   return (
     <CSVLink data={props.data} className="linkRemove">
