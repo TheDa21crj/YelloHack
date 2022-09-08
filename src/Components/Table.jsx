@@ -29,10 +29,6 @@ export default function Table() {
   };
 
   useEffect(() => {
-    console.log(showtrue);
-  }, [showtrue]);
-
-  useEffect(() => {
     getData();
   }, []);
 
