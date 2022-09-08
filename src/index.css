@@ -74,7 +74,7 @@ th:last-child {
 }
 
 tr:nth-child(even) {
-  background-color: #d0fae4;
+  background-color: #ffe898;
 }
 
 tr {
@@ -82,5 +82,5 @@ tr {
 }
 
 tr:hover {
-  background-color: #a8f4d0;
+  background-color: #fff8bc;
 }
