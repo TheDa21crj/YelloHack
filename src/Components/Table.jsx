@@ -37,7 +37,25 @@ export default function Table() {
     const data = await response.json();
 
     if (data.results.length > 0) {
-      setData(data.results);
+      var arr = {};
+
+      for (let i = 0; i < data.results.length; i++) {
+        var tempArr = {};
+
+        tempArr["name"] =
+          data.results[i].name.title +
+          " " +
+          data.results[i].name.first +
+          " " +
+          data.results[i].name.last;
+        tempArr["dob"] = data.results[i].dob.date;
+        tempArr["email"] = data.results[i].email;
+        tempArr["gender"] = data.results[i].gender;
+
+        arr[i] = tempArr;
+      }
+
+      setData(arr);
     } else {
       setData([]);
     }
