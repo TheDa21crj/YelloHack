@@ -38,6 +38,12 @@ export default function Home() {
                 <p>
                   Gender: <span>{value.gender}</span>
                 </p>
+                <p>
+                  DOB: <span>{value.dob.date}</span>
+                </p>
+                <p>
+                  Email: <span>{value.email}</span>
+                </p>
                 <br />
                 <br />
               </div>
