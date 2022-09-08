@@ -14,16 +14,27 @@ export default function Csv(props) {
       dob: "",
       gender: "",
     };
-    for (let i = 0; i < props.data.length; i++) {}
-    console.log(props.data.length);
+    for (let i = 0; i < props.data.length; i++) {
+      arr.name =
+        props.data[i].name.title +
+        " " +
+        props.data[i].name.first +
+        " " +
+        props.data[i].name.last;
+      arr.dob = props.data[i].dob.date;
+      arr.email = props.data[i].email;
+      arr.gender = props.data[i].gender;
+    }
+
+    console.log(arr);
   };
 
   return (
-    <CSVLink data={props.data} className="linkRemove">
-      <div className="mDivCSV">
-        <GetAppIcon />
-        <p>Export</p>
-      </div>
-    </CSVLink>
+    // <CSVLink data={props.data} className="linkRemove">
+    <div className="mDivCSV">
+      <GetAppIcon />
+      <p>Export</p>
+    </div>
+    // </CSVLink>
   );
 }
