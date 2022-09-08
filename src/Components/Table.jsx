@@ -62,7 +62,7 @@ export default function Table() {
 
       setPropsData(arr);
 
-      // setloading(false);
+      setloading(false);
     } else {
       setData([]);
     }
