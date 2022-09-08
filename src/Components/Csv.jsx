@@ -29,15 +29,12 @@ export default function Csv(props) {
       arr.email = props.data[i].email;
       arr.gender = props.data[i].gender;
 
-      //   tempArr.push(arr);
+      tempArr.push(arr);
 
       console.log(arr);
-
-      arr.name = "";
-      arr.dob = "";
-      arr.email = "";
-      arr.gender = "";
     }
+
+    console.log(tempArr);
   };
 
   return (
