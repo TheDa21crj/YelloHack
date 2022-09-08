@@ -12,9 +12,9 @@ export default function Table(props) {
           <th>DOB</th>
           <th>Email</th>
         </tr>
-        {data ? (
+        {props.data ? (
           <>
-            {data.map((value, map) => {
+            {props.data.map((value, map) => {
               return <tr></tr>;
             })}
           </>
