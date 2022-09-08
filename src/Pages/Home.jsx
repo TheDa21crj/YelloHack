@@ -14,6 +14,8 @@ export default function Home() {
     console.table(data.results);
     if (data.results.length > 0) {
       setData(data.results);
+
+      console.table(data.results[0].name);
     } else {
       setData([]);
     }
@@ -29,7 +31,8 @@ export default function Home() {
             return (
               <div>
                 <p>
-                  name = <span></span> <span></span> <span></span>
+                  name = <span>value.name.title</span>{" "}
+                  <span>value.name.first</span> <span>value.name.title</span>
                 </p>
                 <span></span>
               </div>
