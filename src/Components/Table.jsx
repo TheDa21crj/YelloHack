@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Moment from "react-moment";
 
 export default function Table(props) {
+  const [search, setsearch] = useState("");
+
+  const filterData = async function (e) {
+    setsearch(e.target.value);
+  };
   return (
     <>
+      <input type="text" name="" id="" onChange={filterData} />
       <table>
         <tr>
           <th>Name</th>
