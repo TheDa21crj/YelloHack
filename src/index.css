@@ -41,6 +41,7 @@ th {
   -ms-user-select: none;
   background-color: lightgray;
   color: gray;
+  border: solid 0px #000;
 }
 
 td,
