@@ -3,7 +3,12 @@ import GetAppIcon from "@mui/icons-material/GetApp";
 import { CSVLink } from "react-csv";
 
 export default function Csv(props) {
-  const csvData = [];
+  useEffect(() => {
+    cvsDataFun();
+  }, []);
+
+  const cvsDataFun = async () => {};
+
   return (
     <CSVLink data={props.data} className="linkRemove">
       <div className="mDivCSV">
