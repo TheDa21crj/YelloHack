@@ -9,6 +9,14 @@ export default function Table(props) {
     setsearch(e.target.value);
   };
 
+  const sortFun = async () => {
+    setTrue(!showtrue);
+  };
+
+  useEffect(() => {
+    console.log(showtrue);
+  }, [showtrue]);
+
   return (
     <>
       <input
@@ -52,7 +60,7 @@ export default function Table(props) {
               .map((value, key) => {
                 return (
                   <tr key={key}>
-                    <td onClick={setTrue(!showtrue)}>
+                    <td onClick={sortFun}>
                       <span>{value.name.title}</span>{" "}
                       <span>{value.name.first}</span>{" "}
                       <span>{value.name.last}</span>
