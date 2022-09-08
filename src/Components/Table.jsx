@@ -12,6 +12,7 @@ export default function Table(props) {
           <th>DOB</th>
           <th>Email</th>
         </tr>
+        {data ? <></> : "No Data"}
         <tr>
           <td>Company</td>
           <td>Contact</td>
