@@ -26,11 +26,12 @@ export default function Csv(props) {
   };
 
   return (
-    // <CSVLink data={props.data} className="linkRemove">
-    <div className="mDivCSV" onClick={cvsDataFun}>
-      <GetAppIcon />
-      <p>Export</p>
-    </div>
-    // </CSVLink>
+    <CSVLink data={props.data} className="linkRemove">
+      <div className="mDivCSV">
+        <GetAppIcon />
+        <p>Export</p>
+      </div>
+      //{" "}
+    </CSVLink>
   );
 }
