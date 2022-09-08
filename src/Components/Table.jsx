@@ -25,19 +25,24 @@ export default function Table(props) {
           <>
             {props.data
               .filter((value) => {
+                let name =
+                  value.name.title +
+                  " " +
+                  value.name.first +
+                  " " +
+                  value.name.last;
+
                 if (search === "") {
                   return value;
                 } else if (
-                  // value.name.title
-                  //   .toLowerCase()
-                  //   .includes(search.toLowerCase()) ||
+                  name.toLowerCase().includes(search.toLowerCase()) ||
                   // value.name.first
                   //   .toLowerCase()
                   //   .includes(search.toLowerCase()) ||
                   // value.name.last
                   //   .toLowerCase()
                   //   .includes(search.toLowerCase()) ||
-                  // value.gender.toLowerCase().includes(search.toLowerCase()) ||
+                  value.gender.toLowerCase().includes(search.toLowerCase()) ||
                   value.email.toLowerCase().includes(search.toLowerCase())
                 ) {
                   console.table(value);
