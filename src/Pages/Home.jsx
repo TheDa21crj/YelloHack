@@ -15,7 +15,7 @@ export default function Home() {
     if (data.results.length > 0) {
       setData(data.results);
 
-      console.table(data.results[0].name);
+      // console.table(data.results[0].name);
     } else {
       setData([]);
     }
