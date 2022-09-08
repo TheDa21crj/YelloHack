@@ -6,8 +6,6 @@ export default function Table() {
   const [showtrue, setTrue] = useState(false);
   const [showdata, setData] = useState([]);
 
-  // var temp = props.data;
-
   const filterData = async function (e) {
     setsearch(e.target.value);
   };
@@ -40,7 +38,6 @@ export default function Table() {
     const response = await fetch("https://randomuser.me/api/?results=10");
     const data = await response.json();
 
-    // console.table(data.results);
     if (data.results.length > 0) {
       setData(data.results);
     } else {
