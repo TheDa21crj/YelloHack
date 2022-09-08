@@ -52,13 +52,11 @@ th {
 td {
   font-weight: bold;
   text-transform: capitalize;
-  border: solid 1px #000;
+  border: solid 0px #000;
   border-style: none solid solid none;
 }
 
 td {
-  border: solid 1px #000;
-  border-style: solid none;
   padding: 10px;
   /* background-color: cyan; */
 }
