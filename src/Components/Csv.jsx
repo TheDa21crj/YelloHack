@@ -7,11 +7,11 @@ export default function Csv(props) {
     console.log(props.data);
   };
   return (
-    // <CSVLink data={props.data} className="linkRemove">
-    <div className="mDivCSV" onClick={down}>
-      <GetAppIcon />
-      <p>Export</p>
-    </div>
-    // </CSVLink>
+    <CSVLink data={props.data} className="linkRemove">
+      <div className="mDivCSV" onClick={down}>
+        <GetAppIcon />
+        <p>Export</p>
+      </div>
+    </CSVLink>
   );
 }
