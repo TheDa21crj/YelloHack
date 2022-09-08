@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Moment from "react-moment";
+import Csv from "./Csv";
 
 export default function Table() {
   const [search, setsearch] = useState("");
@@ -48,7 +49,7 @@ export default function Table() {
 
   return (
     <>
-      <div>
+      <div className="topDiv">
         <input
           type="text"
           name=""
@@ -56,6 +57,7 @@ export default function Table() {
           onChange={filterData}
           placeholder="Search ..."
         />
+        <Csv />
       </div>
       <div className="mDiv">
         <table>
