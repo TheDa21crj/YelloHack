@@ -4,7 +4,6 @@ import Moment from "react-moment";
 export default function Table(props) {
   const [search, setsearch] = useState("");
   const [showtrue, setTrue] = useState(false);
-  // const [sort, setsort] = useState(props.data);
 
   const filterData = async function (e) {
     setsearch(e.target.value);
