@@ -91,14 +91,14 @@ export default function Table() {
                       <td>
                         <p className="namePTag">
                           <img
-                            src={value.picture.medium}
+                            src={value.picture.thumbnail}
                             alt=""
                             className="userImg"
                           />
-                          {"  "}
-                          <span>{value.name.title}</span>{" "}
-                          <span>{value.name.first}</span>{" "}
-                          <span>{value.name.last}</span>
+                          <p className="name">
+                            {value.name.title} {value.name.first}{" "}
+                            {value.name.last}
+                          </p>
                         </p>
                       </td>
                       <td>{value.gender}</td>
