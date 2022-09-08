@@ -5,7 +5,7 @@ export default function Csv() {
   return (
     <div className="mDiv">
       <GetAppIcon />
-      Csv
+      Export
     </div>
   );
 }
