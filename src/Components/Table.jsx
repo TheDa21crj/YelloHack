@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Moment from "react-moment";
 
 export default function Table(props) {
   const [search, setsearch] = useState("");
+
+  useEffect(() => {
+    console.log(search);
+  }, [search]);
 
   const filterData = async function (e) {
     setsearch(e.target.value);
@@ -24,14 +28,26 @@ export default function Table(props) {
                 if (search === "") {
                   return value;
                 } else if (
-                  value.name.toLowerCase().includes(search.toLowerCase())
+                  // value.name.title
+                  //   .toLowerCase()
+                  //   .includes(search.toLowerCase()) ||
+                  // value.name.first
+                  //   .toLowerCase()
+                  //   .includes(search.toLowerCase()) ||
+                  // value.name.last
+                  //   .toLowerCase()
+                  //   .includes(search.toLowerCase()) ||
+                  value.gender.toLowerCase().includes(search.toLowerCase())
+                  // ||
+                  // value.email.toLowerCase().includes(search.toLowerCase())
                 ) {
+                  console.table(value);
                   return value;
                 }
               })
-              .map((value, map) => {
+              .map((value, key) => {
                 return (
-                  <tr>
+                  <tr key={key}>
                     <td>
                       <span>{value.name.title}</span>{" "}
                       <span>{value.name.first}</span>{" "}
