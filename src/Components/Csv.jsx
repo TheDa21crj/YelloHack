@@ -3,11 +3,15 @@ import GetAppIcon from "@mui/icons-material/GetApp";
 import { CSVLink } from "react-csv";
 
 export default function Csv(props) {
+  const [downdata, setdata] = useState([]);
+
   useEffect(() => {
     cvsDataFun();
   }, []);
 
   const cvsDataFun = async () => {
+    var tempArr = [];
+
     var arr = {
       name: "",
       email: "",
@@ -24,9 +28,16 @@ export default function Csv(props) {
       arr.dob = props.data[i].dob.date;
       arr.email = props.data[i].email;
       arr.gender = props.data[i].gender;
-    }
 
-    console.log(arr);
+      //   tempArr.push(arr);
+
+      console.log(arr);
+
+      arr.name = "";
+      arr.dob = "";
+      arr.email = "";
+      arr.gender = "";
+    }
   };
 
   return (
