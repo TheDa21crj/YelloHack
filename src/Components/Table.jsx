@@ -12,13 +12,15 @@ export default function Table(props) {
           <th>DOB</th>
           <th>Email</th>
         </tr>
-        {data ? <></> : "No Data"}
-        <tr>
-          <td>Company</td>
-          <td>Contact</td>
-          <td>Country</td>
-          <td>Country</td>
-        </tr>
+        {data ? (
+          <>
+            {data.map((value, map) => {
+              return <tr></tr>;
+            })}
+          </>
+        ) : (
+          "No Data"
+        )}
         <tr>
           <td>Company</td>
           <td>Contact</td>
