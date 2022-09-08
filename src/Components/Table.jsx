@@ -13,7 +13,13 @@ export default function Table(props) {
   };
   return (
     <>
-      <input type="text" name="" id="" onChange={filterData} />
+      <input
+        type="text"
+        name=""
+        id=""
+        onChange={filterData}
+        placeholder="Search ..."
+      />
       <table>
         <tr>
           <th>Name</th>
