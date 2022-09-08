@@ -59,17 +59,19 @@ td {
   padding: 10px;
   /* background-color: cyan; */
 }
-td:first-child {
+td:first-child,
+th:first-child {
   border-left-style: solid;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-td:last-child {
+td:last-child,
+th:first-child {
   border-right-style: solid;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 tr:nth-child(even) {
-  background-color: #ddd45d;
+  background-color: #d4f6cc;
 }
