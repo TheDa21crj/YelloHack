@@ -51,7 +51,7 @@ export default function Table() {
           data.results[i].name.first +
           " " +
           data.results[i].name.last;
-        tempArr["dob"] = data.results[i].dob.date;
+        tempArr["dob"] = data.results[i].dob.date.substring(0, 10);
         tempArr["email"] = data.results[i].email;
         tempArr["gender"] = data.results[i].gender;
 
