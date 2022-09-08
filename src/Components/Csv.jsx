@@ -31,7 +31,7 @@ export default function Csv(props) {
 
   return (
     // <CSVLink data={props.data} className="linkRemove">
-    <div className="mDivCSV">
+    <div className="mDivCSV" onClick={cvsDataFun}>
       <GetAppIcon />
       <p>Export</p>
     </div>
