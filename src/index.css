@@ -201,13 +201,11 @@ tr:hover {
     position: sticky;
     left: 0;
     z-index: 2;
-    /* box-shadow: 0px 5px 0px 0px 1px lightgrey; */
   }
   tr td:first-child {
     position: sticky;
     left: 0;
     z-index: 2;
-    /* box-shadow: 0px 5px 0px 0px 1px lightgrey; */
   }
 
   .overFlow {
