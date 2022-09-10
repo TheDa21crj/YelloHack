@@ -24,7 +24,6 @@ code {
   align-items: center;
   margin-top: 10px;
   margin-bottom: 30px;
-  overflow-x: scroll;
 }
 
 table {
@@ -32,7 +31,6 @@ table {
   border-collapse: collapse;
   width: 95%;
   border-spacing: 0 10px;
-  border-collapse: collapse;
 }
 
 th {
@@ -178,40 +176,4 @@ tr:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-@media only screen and (max-width: 850px) {
-  .mDiv {
-    margin-left: 2.5%;
-    width: 95%;
-    border-radius: 8px;
-  }
-  table {
-    width: 100%;
-    display: block;
-  }
-  .topDiv {
-    margin-left: 5%;
-    width: 90%;
-  }
-
-  .overFlow {
-    overflow: hidden;
-  }
 }
