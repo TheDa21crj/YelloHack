@@ -31,6 +31,10 @@ table {
   border-collapse: collapse;
   width: 95%;
   border-spacing: 0 10px;
+  border-collapse: collapse;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 th {
@@ -176,4 +180,7 @@ tr:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
 }
