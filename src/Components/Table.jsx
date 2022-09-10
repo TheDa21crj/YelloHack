@@ -83,91 +83,95 @@ export default function Table() {
         </div>
         <Csv data={propsData} />
       </div>
-      <div className="mDiv">
-        {loading ? (
-          <>
-            <table>
-              <tr>
-                <th onClick={sortFun} className="nameTH">
-                  Name
-                </th>
-                <th>Gender</th>
-                <th>DOB</th>
-                <th>Email</th>
-              </tr>
-            </table>
-            <div className="loadingDiv">
-              <img src={Loading} alt="" />
-            </div>
-          </>
-        ) : (
-          <>
-            <table>
-              <tr>
-                <th onClick={sortFun} className="nameTH">
-                  Name
-                </th>
-                <th>Gender</th>
-                <th>DOB</th>
-                <th>Email</th>
-              </tr>
-              {showdata ? (
-                <>
-                  {showdata
-                    .filter((value) => {
-                      let name =
-                        value.name.title +
-                        " " +
-                        value.name.first +
-                        " " +
-                        value.name.last;
+      <div className="overFlow">
+        <div className="mDiv">
+          {loading ? (
+            <>
+              <table>
+                <tr>
+                  <th onClick={sortFun} className="nameTH">
+                    Name
+                  </th>
+                  <th>Gender</th>
+                  <th>DOB</th>
+                  <th>Email</th>
+                </tr>
+              </table>
+              <div className="loadingDiv">
+                <img src={Loading} alt="" />
+              </div>
+            </>
+          ) : (
+            <>
+              <table>
+                <tr>
+                  <th onClick={sortFun} className="nameTH">
+                    Name
+                  </th>
+                  <th>Gender</th>
+                  <th>DOB</th>
+                  <th>Email</th>
+                </tr>
+                {showdata ? (
+                  <>
+                    {showdata
+                      .filter((value) => {
+                        let name =
+                          value.name.title +
+                          " " +
+                          value.name.first +
+                          " " +
+                          value.name.last;
 
-                      if (search === "") {
-                        return value;
-                      } else if (
-                        name.toLowerCase().includes(search.toLowerCase()) ||
-                        value.gender
-                          .toLowerCase()
-                          .includes(search.toLowerCase()) ||
-                        value.email.toLowerCase().includes(search.toLowerCase())
-                      ) {
-                        return value;
-                      }
-                    })
-                    .map((value, key) => {
-                      return (
-                        <tr key={key}>
-                          <td>
-                            <p className="namePTag">
-                              <img
-                                src={value.picture.medium}
-                                alt=""
-                                className="userImg"
-                              />
-                              <p className="name">
-                                {value.name.title} {value.name.first}{" "}
-                                {value.name.last}
+                        if (search === "") {
+                          return value;
+                        } else if (
+                          name.toLowerCase().includes(search.toLowerCase()) ||
+                          value.gender
+                            .toLowerCase()
+                            .includes(search.toLowerCase()) ||
+                          value.email
+                            .toLowerCase()
+                            .includes(search.toLowerCase())
+                        ) {
+                          return value;
+                        }
+                      })
+                      .map((value, key) => {
+                        return (
+                          <tr key={key}>
+                            <td>
+                              <p className="namePTag">
+                                <img
+                                  src={value.picture.medium}
+                                  alt=""
+                                  className="userImg"
+                                />
+                                <p className="name">
+                                  {value.name.title} {value.name.first}{" "}
+                                  {value.name.last}
+                                </p>
                               </p>
-                            </p>
-                          </td>
-                          <td>{value.gender}</td>
-                          <td>
-                            <Moment
-                              format="MMMM Do YYYY"
-                              date={value.dob.date}
-                            />
-                          </td>
-                          <td>{value.email}</td>
-                        </tr>
-                      );
-                    })}
-                </>
-              ) : (
-                "No Data"
-              )}
-            </table>
-          </>
-        )}
+                            </td>
+                            <td>{value.gender}</td>
+                            <td>
+                              <Moment
+                                format="MMMM Do YYYY"
+                                date={value.dob.date}
+                              />
+                            </td>
+                            <td>{value.email}</td>
+                          </tr>
+                        );
+                      })}
+                  </>
+                ) : (
+                  "No Data"
+                )}
+              </table>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
