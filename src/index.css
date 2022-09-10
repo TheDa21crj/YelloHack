@@ -189,11 +189,4 @@ tr:hover {
   table {
     display: block;
   }
-  tr th {
-    position: sticky;
-    left: 0;
-    z-index: 2;
-    /* background-color: pink; */
-    box-shadow: 0px 5px 0px 0px 1px lightgrey;
-  }
 }
