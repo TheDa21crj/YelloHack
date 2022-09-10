@@ -189,4 +189,8 @@ tr:hover {
   table {
     display: block;
   }
+  .topDiv {
+    margin-left: 5%;
+    width: 90%;
+  }
 }
