@@ -202,11 +202,6 @@ tr:hover {
     left: 0;
     z-index: 2;
   }
-  tr td:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 2;
-  }
 
   .overFlow {
     overflow: hidden;
