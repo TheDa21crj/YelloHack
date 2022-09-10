@@ -32,9 +32,6 @@ table {
   width: 95%;
   border-spacing: 0 10px;
   border-collapse: collapse;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
 }
 
 th {
