@@ -184,6 +184,7 @@ tr:hover {
   .mDiv {
     margin-left: 2.5%;
     width: 95%;
+    border-radius: 8px;
   }
   table {
     width: 100%;
@@ -192,15 +193,6 @@ tr:hover {
   .topDiv {
     margin-left: 5%;
     width: 90%;
-  }
-  tr:first-child {
-    background-color: #d1d4db;
-  }
-
-  tr th:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 2;
   }
 
   .overFlow {
